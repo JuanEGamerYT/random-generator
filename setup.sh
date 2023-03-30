@@ -25,7 +25,7 @@ clear
 figlet "JuanE" | lolcat -F 1
 pkg install git -y
 clear
-git clone https://github.com/JuanEGamerYT/Generator
+git clone https://github.com/JuanEGamerYT/Random-Generator
 clear
 echo "Updated: OK to last version avaible" | lolcat
 sleep 4
