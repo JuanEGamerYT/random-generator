@@ -15,10 +15,12 @@ pkg install lolcat -y
 pkg install figlet -y
 clear
 echo "Reqisites: OK" | lolcat
+sleep 4
 cd ..
 rm -rf Generator
 clear
 echo "Updating?: ..."
+sleep 4
 clear
 figlet "JuanE" | lolcat -F 1
 pkg install git -y
@@ -26,5 +28,6 @@ clear
 git clone https://github.com/JuanEGamerYT/Generator
 clear
 echo "Updated: OK to last version avaible" | lolcat
+sleep 4
 clear
 sleep 1
