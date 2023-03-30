@@ -11,7 +11,11 @@ HOLA (Mayusculas) mundo (Minusculas).
 Para los españoles tengo el generador.py
 
 Testeado en Windows, Linux ✅
-Testeado en Termux, otros medios ⛔. (v1.2)
+Testeado en Termux ✅
+
+Auto actualizable o opcion de actualizar ⛔
+Antes de usar en Termux ejecuta "bash install.sh"
+Para termux usar en termux usa "bash setup.sh"
 
 
 Version: English(Ingles).
@@ -26,5 +30,11 @@ HELLO (upper case) world (lower case).
 
 For English use generator.py
 
+Tested in Termux ✅
+
+Self upgradable or upgrade option ⛔
+Before using Termux run "bash install.sh"
+For termux use in termux use "bash setup.sh"
+
 Tested in Windows and Linux ✅
-Tested on Termux and others ⛔ (v1.2)
+Tested on Termux ✅
