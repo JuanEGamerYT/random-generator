@@ -13,7 +13,7 @@ Para los españoles tengo el generador.py
 Testeado en Windows, Linux ✅
 Testeado en Termux ✅
 
-Auto actualizable o opcion de actualizar ⛔
+Opcion de actualizar ✅
 Antes de usar en Termux ejecuta "bash install.sh"
 Para termux usar en termux usa "bash setup.sh"
 
@@ -32,7 +32,7 @@ For English use generator.py
 
 Tested in Termux ✅
 
-Self upgradable or upgrade option ⛔
+Upgrade option ✅
 Before using Termux run "bash install.sh"
 For termux use in termux use "bash setup.sh"
 
