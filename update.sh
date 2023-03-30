@@ -11,4 +11,3 @@ sleep 4
 figlet "JuanE" | lolcat -F 1
 echo "Actualizado a la última version | Updated to last version" | lolcat
 sleep 1
-exit

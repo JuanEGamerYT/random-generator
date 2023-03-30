@@ -1,8 +1,3 @@
-pkg update
-pkg upgrade -y
-pkg install python
-pip install --upgrade pip
-pkg install lolcat
 sleep 4
 figlet "JuanE" |lolcat -F 1
 echo " ¿Que idioma Hablas? | What is your language? "
