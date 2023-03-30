@@ -1,0 +1,6 @@
+
+Enter the amount of the number of capital letters you want to include
+Enter the amount of the number of lowercase letters you want to include
+Enter the amount of the number of numbers you want to include
+Enter the amount of the number of combinations you want to generate
+
