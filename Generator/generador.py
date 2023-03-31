@@ -1,5 +1,6 @@
 import itertools
 import random
+import os
 
 # Preguntar si se incluirán caracteres especiales
 caracteres_especiales = input("¿Desea incluir caracteres especiales? (s/n): ")
@@ -28,6 +29,11 @@ cant_combinaciones = int(input("Ingrese la cantidad de combinaciones que desea g
 # Calcular la longitud total de cada combinación
 longitud = cant_mayus + cant_minus + cant_numeros
 
+# Crear un directorio "Generado" en el directorio anterior
+dir_path = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
+generated_dir = os.path.join(dir_path, "Generado")
+os.makedirs(generated_dir, exist_ok=True)
+
 # Generar múltiples combinaciones
 for i in range(cant_combinaciones):
     # Elegir al azar los caracteres que se utilizarán en cada combinación
@@ -47,8 +53,9 @@ for i in range(cant_combinaciones):
     # Convertir la lista de caracteres en una cadena
     combinacion = ''.join(caracteres_comb)
 
-    # Escribir la combinación en el archivo "generated.txt"
-    with open("generated.txt", "a") as archivo:
+    # Escribir la combinación en el archivo "generated.txt" en la carpeta "Generado"
+    file_path = os.path.join(generated_dir, "generated.txt")
+    with open(file_path, "a") as archivo:
         archivo.write(combinacion + "\n")
 
-print(f"Se han generado {cant_combinaciones} combinaciones en el archivo 'generated.txt'.")
+print(f"Se han generado {cant_combinaciones} combinaciones en el archivo 'generated.txt' en la carpeta 'Generado'.")

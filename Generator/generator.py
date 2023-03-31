@@ -1,54 +1,61 @@
 import itertools
 import random
+import os
 
-# Preguntar si se incluirán caracteres especiales
-caracteres_especiales = input("¿You want to include special characters? (s/n): ")
+# Ask if special characters will be included
+special_characters = input("Do you want to include special characters? (y/n): ")
 
-if caracteres_especiales.lower() == "s":
-    # Definir los caracteres que se combinarán, incluyendo caracteres especiales
-    caracteres = "abcdefghijklmnopqrstuvwxyz!#$%&()*+,-./:;<=>?@[\\]^_`{|}~"
-    caracteres_mayus = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    numeros = "0123456789"
+if special_characters.lower() == "y":
+    # Define the characters to be combined, including special characters
+    characters = "abcdefghijklmnopqrstuvwxyz!#$%&()*+,-./:;<=>?@[\\]^_`{|}~"
+    characters_upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    numbers = "0123456789"
 else:
-    # Definir los caracteres que se combinarán, sin caracteres especiales
-    caracteres = "abcdefghijklmnopqrstuvwxyz"
-    caracteres_mayus = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    numeros = "0123456789"
+    # Define the characters to be combined, without special characters
+    characters = "abcdefghijklmnopqrstuvwxyz"
+    characters_upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    numbers = "0123456789"
 
-# Pedir la cantidad de letras mayúsculas y minúsculas
-cant_mayus = int(input("Enter the amount of the number of capital letters you want to include: "))
-cant_minus = int(input("Enter the amount of the number of lowercase letters you want to include: "))
+# Ask for the amount of uppercase and lowercase letters to include
+upper_count = int(input("Enter the number of uppercase letters you want to include: "))
+lower_count = int(input("Enter the number of lowercase letters you want to include: "))
 
-# Pedir la cantidad de números que se incluirán
-cant_numeros = int(input("Enter the amount of the numbers of numbers you want to include: "))
+# Ask for the amount of numbers to include
+number_count = int(input("Enter the number of numbers you want to include: "))
 
-# Pedir la cantidad de combinaciones a generar
-cant_combinaciones = int(input("Enter the amount of the number of combinations you want to generate: "))
+# Ask for the number of combinations to generate
+combination_count = int(input("Enter the number of combinations you want to generate: "))
 
-# Calcular la longitud total de cada combinación
-longitud = cant_mayus + cant_minus + cant_numeros
+# Calculate the total length of each combination
+length = upper_count + lower_count + number_count
 
-# Generar múltiples combinaciones
-for i in range(cant_combinaciones):
-    # Elegir al azar los caracteres que se utilizarán en cada combinación
-    caracteres_comb = [random.choice(caracteres) for i in range(longitud-cant_mayus-cant_minus-cant_numeros)]
-    caracteres_mayus_comb = [random.choice(caracteres_mayus) for i in range(cant_mayus)]
-    caracteres_minus_comb = [random.choice(caracteres) for i in range(cant_minus)]
-    numeros_comb = [random.choice(numeros) for i in range(cant_numeros)]
+# Create a "Generated" directory in the parent directory
+dir_path = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
+generated_dir = os.path.join(dir_path, "Generated")
+os.makedirs(generated_dir, exist_ok=True)
 
-    # Combinar todos los caracteres
-    caracteres_comb.extend(caracteres_mayus_comb)
-    caracteres_comb.extend(caracteres_minus_comb)
-    caracteres_comb.extend(numeros_comb)
+# Generate multiple combinations
+for i in range(combination_count):
+    # Choose characters to use in each combination
+    characters_list = [random.choice(characters) for i in range(length-upper_count-lower_count-number_count)]
+    characters_upper_list = [random.choice(characters_upper) for i in range(upper_count)]
+    characters_lower_list = [random.choice(characters) for i in range(lower_count)]
+    numbers_list = [random.choice(numbers) for i in range(number_count)]
 
-    # Mezclar los caracteres para generar combinaciones únicas
-    random.shuffle(caracteres_comb)
+    # Combine all the characters
+    characters_list.extend(characters_upper_list)
+    characters_list.extend(characters_lower_list)
+    characters_list.extend(numbers_list)
 
-    # Convertir la lista de caracteres en una cadena
-    combinacion = ''.join(caracteres_comb)
+    # Shuffle the characters to generate unique combinations
+    random.shuffle(characters_list)
 
-    # Escribir la combinación en el archivo "generated.txt"
-    with open("generated.txt", "a") as archivo:
-        archivo.write(combinacion + "\n")
+    # Convert the list of characters to a string
+    combination = ''.join(characters_list)
 
-print(f"Generated {cant_combinaciones} combinations 'generated.txt'.")
+    # Write the combination to the "generated.txt" file in the "Generated" directory
+    file_path = os.path.join(generated_dir, "generated.txt")
+    with open(file_path, "a") as file:
+        file.write(combination + "\n")
+
+print(f"{combination_count} combinations have been generated in the 'generated.txt' file in the 'Generated' directory.")

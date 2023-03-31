@@ -12,7 +12,7 @@ if [ $opcion -eq 1 ]; then
 elif [ $opcion -eq 2 ]; then
     clear
     figlet "JuanE" | lolcat -F 1
-    cd generator
+    cd Generator
     python generador.py
 else
     clear

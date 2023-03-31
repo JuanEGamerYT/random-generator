@@ -12,11 +12,13 @@ Para los españoles tengo el generador.py
 
 Testeado en Windows, Linux ✅
 Testeado en Termux ✅
-
 Opcion de actualizar ✅
+
 Antes de usar en Termux ejecuta "bash install.sh"
 Para termux usar en termux usa "bash setup.sh"
 
+
+---------------------------------------------------------------------------
 
 Version: English(Ingles).
 
@@ -30,11 +32,9 @@ HELLO (upper case) world (lower case).
 
 For English use generator.py
 
-Tested in Termux ✅
-
-Upgrade option ✅
-Before using Termux run "bash install.sh"
-For termux use in termux use "bash setup.sh"
-
 Tested in Windows and Linux ✅
 Tested on Termux ✅
+Upgrade option ✅
+
+Before using Termux run "bash install.sh"
+For termux use in termux use "bash setup.sh"

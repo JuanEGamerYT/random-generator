@@ -2,14 +2,19 @@ figlet "JuanE" | lolcat -F 1
 echo "Installing"
 clear
 echo "Installing."
+sleep 4
 clear
 echo "Installing.."
+sleep 4
 clear
 echo "Installing..."
+sleep 4
+clear
 echo "Start."
+sleep 3
 pkg update
 pkg upgrade -y
-pkg install python
+pkg install python -y
 pip install --upgrade pip
 pkg install lolcat -y
 pkg install figlet -y
@@ -17,7 +22,7 @@ clear
 echo "Reqisites: OK" | lolcat
 sleep 4
 cd ..
-rm -rf Generator
+rm -rf Random-Generator
 clear
 echo "Updating?: ..."
 sleep 4
