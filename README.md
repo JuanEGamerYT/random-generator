@@ -13,12 +13,12 @@ pkg install git
 
 2. Luego de la instalacion ejecuta
 ```
-git clone https://github.com/JuanEGamerYT/Random-Generator
+git clone https://github.com/JuanEGamerYT/random-generator
 ```
 
 3. Luego podras entrar a la carpeta usando
 ```
-cd Random-Generator
+cd random-generator
 ```
 
 4. Luego ejecuta
@@ -65,12 +65,12 @@ pkg install git
 
 2. After the installation run
 ```
-git clone https://github.com/JuanEGamerYT/Random-Generator
+git clone https://github.com/JuanEGamerYT/random-generator
 ```
 
 3. Then you can enter the folder using
 ```
-cd Random-Generator
+cd random-generator
 ```
 
 4. Then run

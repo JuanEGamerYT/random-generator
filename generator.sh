@@ -5,12 +5,15 @@ figlet "JuanE" |lolcat -F 1
 # Preguntar al usuario qué idioma habla
 echo "Do you speak English or Spanish? / ¿Hablas Inglés o Español?"
 echo "  "
-echo ">"
+echo " ---Debes intruducir Español o Ingles (tal cual esta escrito arriba)"
+echo "  "
+echo " ---You must enter Spanish or English (as written above)" 
+echo "↓"
 read lang
 
 clear 
 
-if [ "$lang" == "Spanish" ] || [ "$lang" == "español" ]; then
+if [ "$lang" == "Spanish" ] || [ "$lang" == "Español" ]; then
   # Preguntar al usuario qué opción quiere elegir
   figlet "JuanE" | lolcat
   echo "  "
@@ -33,7 +36,7 @@ if [ "$lang" == "Spanish" ] || [ "$lang" == "español" ]; then
     echo "Opción inválida. Inténtelo de nuevo"
   fi
 
-elif [ "$lang" == "English" ] || [ "$lang" == "inglés" ]; then
+elif [ "$lang" == "English" ] || [ "$lang" == "Inglés" ]; then
   # Preguntar al usuario qué opción quiere elegir
   figlet "JuanE" | lolcat
   echo "  "
