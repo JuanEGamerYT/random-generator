@@ -1,26 +1,49 @@
 sleep 4
 figlet "JuanE" |lolcat -F 1
-echo " ¿Que idioma Hablas? | What is your language? "
-echo " (1) English | (2) Español "
-read opcion
+#!/bin/bash
 
-if [ $opcion -eq 1 ]; then
-    clear
-    figlet "JuanE" | lolcat -F 1
-    cd Generator
-    python generator.py
-elif [ $opcion -eq 2 ]; then
-    clear
-    figlet "JuanE" | lolcat -F 1
+# Preguntar al usuario qué idioma habla
+echo "Do you speak English or Spanish? / ¿Hablas inglés o español?"
+read lang
+
+if [ "$lang" == "Spanish" ] || [ "$lang" == "español" ]; then
+  # Preguntar al usuario qué opción quiere elegir
+  echo "¿Quiere hacer combinaciones aleatorias o usar un diccionario?"
+  echo "1. Hacer combinaciones aleatorias"
+  echo "2. Usar un diccionario para las combinaciones"
+  read option
+
+  if [ "$option" == "1" ]; then
+    # Ejecutar generador.py en el directorio Generators
     cd Generator
     python generador.py
-else
-    clear
-    figlet "JuanE" | lolcat -F 1
-    echo "Opción inválida. Por favor ingresa 1 para inglés o 2 para español."
-    echo "Invalid option. Please enter 1 for English or 2 for Spanish."
-fi
+  elif [ "$option" == "2" ]; then
+    # Ejecutar diccionario.py
+    cd Generator
+    python diccionario.py
+  else
+    echo "Opción inválida. Inténtelo de nuevo"
+  fi
 
-sleep 1
-exit
-esac
+elif [ "$lang" == "English" ] || [ "$lang" == "inglés" ]; then
+  # Preguntar al usuario qué opción quiere elegir
+  echo "Do you want to generate random combinations or use a dictionary?"
+  echo "1. Make random combinations"
+  echo "2. Use dictionary to make combinations"
+  read option
+
+  if [ "$option" == "1" ]; then
+    # Ejecutar generator.py en el directorio Generator
+    cd Generator
+    python generator.py
+  elif [ "$option" == "2" ]; then
+    # Ejecutar dictionary.py
+    cd Generator
+    python dictionary.py
+  else
+    echo "Invalid option. Please try again."
+  fi
+
+else
+  echo "Invalid language. Please try again. / Idioma inválido. Inténtelo de nuevo."
+fi

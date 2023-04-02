@@ -1,7 +1,8 @@
 clear
 figlet "JuanE" | lolcat -F 1
 cd ..
-rm -rf Generator
+rm -rf Random-Generator
+rmdir Random-Generator
 clear
 figlet "JuanE" | lolcat -F 1
 pkg install git -y

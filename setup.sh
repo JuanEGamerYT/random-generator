@@ -23,6 +23,7 @@ echo "Reqisites: OK" | lolcat
 sleep 4
 cd ..
 rm -rf Random-Generator
+rmdir Random-Generator
 clear
 echo "Updating?: ..."
 sleep 4
