@@ -22,8 +22,8 @@ clear
 echo "Reqisites: OK" | lolcat
 sleep 4
 cd ..
-rm -rf Random-Generator
-rmdir Random-Generator
+rm -rf random-generator
+rmdir random-generator
 clear
 echo "Updating?: ..."
 sleep 4
@@ -37,3 +37,4 @@ echo "Updated: OK to last version avaible" | lolcat
 sleep 4
 clear
 sleep 1
+cd ..
