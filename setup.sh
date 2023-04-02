@@ -12,12 +12,18 @@ sleep 2
 clear
 echo "Start."
 sleep 1
-pkg update
-pkg upgrade -y
-pkg install python -y
+apt update
+apt upgrade -y
+apt install python -y
+apt install lolcat -y
+apt install figlet -y
+sudo apt update
+sudo apt upgrade -y
+sudo apt install python -y
 pip install --upgrade pip
-pkg install lolcat -y
-pkg install figlet -y
+sudo apt install lolcat -y
+sudo apt install figlet -y
+sleep 2
 clear
 echo "Reqisites: OK" | lolcat
 sleep 4
