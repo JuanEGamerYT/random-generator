@@ -8,7 +8,7 @@ todo aleatorio.
 
 1. En la platamaforma que utilizes descarga git
 ```
-g install git
+pkg install git
 ```
 
 2. Luego de la instalacion ejecuta
