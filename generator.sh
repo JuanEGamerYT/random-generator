@@ -21,7 +21,7 @@ if [ "$lang" == "Spanish" ] || [ "$lang" == "Español" ]; then
   echo "1. Hacer combinaciones aleatorias"
   echo "2. Usar un diccionario para las combinaciones"
   echo "  "
-  echo ">"
+  echo "↓"
   read option
 
   if [ "$option" == "1" ]; then
@@ -44,7 +44,7 @@ elif [ "$lang" == "English" ] || [ "$lang" == "Inglés" ]; then
   echo "1. Make random combinations"
   echo "2. Use dictionary to make combinations"
   echo "  "
-  echo "> "
+  echo "↓"
   read option
 
   if [ "$option" == "1" ]; then
