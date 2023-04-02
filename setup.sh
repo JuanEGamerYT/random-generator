@@ -2,16 +2,16 @@ figlet "JuanE" | lolcat -F 1
 echo "Installing"
 clear
 echo "Installing."
-sleep 4
+sleep 2
 clear
 echo "Installing.."
-sleep 4
+sleep 2
 clear
 echo "Installing..."
-sleep 4
+sleep 2
 clear
 echo "Start."
-sleep 3
+sleep 1
 pkg update
 pkg upgrade -y
 pkg install python -y
